@@ -1,7 +1,11 @@
 %h2 Select a board
 
 = form_tag(controller: "trello", action: "search", method: "post")
-= label_tag(:board_name, "Search for:")
-= text_field_tag(:board_name, 'Cornetto')
-//= select_tag(:board_name, options_for_select(@boards))
+= label_tag(:board_name, "Board:")
+= text_field_tag(:board_name, @default_board_name)
+//= select_tag(:board_name, options_for_select(@boards)) // would create a drop-down of board names
+= label_tag(:board_name, "List(s):")
+= text_field_tag(:list_names, @default_list_names.join(','))	
+= label_tag(:board_name, "Time period:")
+= select_tag(:time_period, options_for_select(@default_time_periods))
 = submit_tag("Search")
