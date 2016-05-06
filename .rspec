@@ -1,2 +1,4 @@
+# Make sure this content is in .rspec_parallel as well
+--order rand
 --color
---require spec_helper
+--format documentation
