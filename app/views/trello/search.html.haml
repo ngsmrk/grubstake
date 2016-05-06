@@ -1,3 +1,24 @@
 %h1 Capitalisation results
-%h2 Selected board #{@board_name}
-=render :partial => "form"
+%h2 Selected board: #{@board_name}
+
+%table
+	%thead
+	%tr
+	%th List
+	%th Name
+	%th Members
+	%th URL
+	%th Archived?
+	%th Last modified	
+
+	%tbody
+	- @card_details.each do | card_detail |
+		%tr
+			%td= card_detail[:list] 
+			%td= card_detail[:name] 
+			%td= card_detail[:members] 
+			%td= card_detail[:url] 
+			%td= card_detail[:archived] 
+			%td= card_detail[:last_modified] 															
+
+= render :partial => "form"
