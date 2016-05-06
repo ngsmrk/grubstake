@@ -2,5 +2,6 @@
 
 = form_tag(controller: "trello", action: "search", method: "post")
 = label_tag(:board_name, "Search for:")
-= select_tag(:board_name, options_for_select(@boards))
+= text_field_tag(:board_name, 'Cornetto')
+//= select_tag(:board_name, options_for_select(@boards))
 = submit_tag("Search")

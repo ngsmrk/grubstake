@@ -1,13 +1,13 @@
 class TrelloController < ApplicationController
   def form
-  	@boards = boards
+  	# @boards = boards
   end
 
   def search
   	@board_name   = params['board_name']
   	@card_details = card_details(cards(@board_name))
   	puts @card_details
-  	@boards = boards  	
+  	# @boards = boards  	
   end
 
   private

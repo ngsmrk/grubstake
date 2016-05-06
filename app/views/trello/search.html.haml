@@ -17,8 +17,8 @@
 			%td= card_detail[:list] 
 			%td= card_detail[:name] 
 			%td= card_detail[:members] 
-			%td= card_detail[:url] 
+			%td= link_to card_detail[:url], card_detail[:url], target: "_blank"
 			%td= card_detail[:archived] 
-			%td= card_detail[:last_modified] 															
+			%td= l card_detail[:last_modified] 															
 
 = render :partial => "form"
