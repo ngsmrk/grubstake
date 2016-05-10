@@ -30,11 +30,11 @@ class TrelloController < ApplicationController
   end
 
   def default_list_names
-    @default_list_names = ['Done (Done)', 'Validating Learning', 'Waiting to Deploy [2]', 'In Review[4]', 'In Progress[7]']    
+    @default_list_names = ['Done','Validating Learning','Waiting to Deploy','In Review','In Progress', 'Post Release Actions', 'Wait']
   end 
 
   def time_periods
-    @default_time_periods = ['day', 'week', 'month']    
+    @default_time_periods = ['day', 'week', 'month'] + (1..31).to_a
   end 
 
   def default_board_name
