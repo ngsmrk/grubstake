@@ -34,7 +34,7 @@ class TrelloController < ApplicationController
   end 
 
   def time_periods
-    @default_time_periods = ['day', 'week', 'month'] + (1..31).to_a
+    @default_time_periods = ['day', 'week', 'month'] + (1..100).to_a
   end 
 
   def default_board_name
